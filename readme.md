@@ -12,5 +12,5 @@
 ## How it works:
   Create food and drink items then create orders for those items
 
-## Live Demo at:
+## Demo:
   [http://barsavvy.herokuapp.com](http://barsavvy.herokuapp.com "Demo")
