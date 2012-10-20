@@ -1,0 +1,30 @@
+<h1>Orders</h1>
+<div class='mb_20'>
+<a class='btn btn-primary' data-route='routes.orders.new'>New Order</a>
+</div>
+<table class='index table table-bordered table-striped'>
+<thead>
+<tr>
+<th>Order #</th>
+<th>Barista</th>
+<th>Status</th>
+<th>Subtotal</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr data-foreach-order='orders'>
+<td data-bind='order.number'></td>
+<td data-bind='order.barista'></td>
+<td data-bind='order.status'></td>
+<td data-bind='order.sub_total'></td>
+<td data-bind='order.total'></td>
+<td>
+<a class='btn btn-warning' data-route='routes.orders[order]'>Edit</a>
+</td>
+<td>
+<a class='btn btn-danger' data-event-click='order.delete'>Delete</a>
+</td>
+</tr>
+</tbody>
+</table>

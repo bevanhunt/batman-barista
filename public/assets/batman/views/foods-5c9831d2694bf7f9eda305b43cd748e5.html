@@ -1,0 +1,26 @@
+<h1>Foods</h1>
+<div class='mb_20'>
+<a class='btn btn-primary' data-route='routes.foods.new'>New Food</a>
+</div>
+<table class='index table table-bordered table-striped'>
+<thead>
+<tr>
+<th>Name</th>
+<th>Price Per Gram</th>
+<th>Base Price</th>
+</tr>
+</thead>
+<tbody>
+<tr data-foreach-food='foods'>
+<td data-bind='food.name'></td>
+<td data-bind='food.price_per_gram' data-mixin='priceFormat'></td>
+<td data-bind='food.base_price' data-mixin='priceFormat'></td>
+<td>
+<a class='btn btn-warning' data-route='routes.foods[food].edit'>Edit</a>
+</td>
+<td>
+<a class='btn btn-danger' data-event-click='food.delete'>Delete</a>
+</td>
+</tr>
+</tbody>
+</table>

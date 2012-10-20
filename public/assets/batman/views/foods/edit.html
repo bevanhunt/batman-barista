@@ -1,0 +1,31 @@
+<h1>Edit Food</h1>
+<form class='form-horizontal' data-event-submit='update' data-formfor-food='food'>
+<fieldset>
+<div class='alert-message' data-showif='food.errors.length' id='error-explanation'>
+<b>
+Errors that need to be corrected:
+</b>
+<ul>
+<li data-bind='error.fullMessage' data-foreach-error='food.errors'></li>
+</ul>
+</div>
+<label class='lbl_50'>Name:</label>
+<div class='mt_5'>
+<input data-bind='food.name'>
+</div>
+<label class='lbl_150'>Price Per Gram:</label>
+<div class='mt_5'>
+<input data-bind='food.price_per_gram'>
+</div>
+<label>Base Price:</label>
+<div class='mt_5'>
+<input data-bind='food.base_price'>
+</div>
+<div class='mt_20'>
+<input class='btn btn-primary' type='submit' value='Update Food'>
+</div>
+</fieldset>
+</form>
+<div class='mt_30'>
+<a data-route='routes.foods'>Back</a>
+</div>

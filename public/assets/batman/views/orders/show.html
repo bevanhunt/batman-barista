@@ -1,0 +1,136 @@
+<h3 data-bind='order.number'></h3>
+<form class='form-horizontal' data-formfor-order='order'>
+<fieldset>
+<label class='lbl_100'>Barista:</label>
+<div class='mt_5'></div>
+<select data-bind='order.barista' data-event-change='update'>
+<option data-bind='barista' data-foreach-barista='baristas'></option>
+</select>
+<label class='lbl_100'>Status:</label>
+<div class='mt_5'></div>
+<select data-bind='order.status' data-event-change='update'>
+<option data-bind='status' data-foreach-status='statuses'></option>
+</select>
+</fieldset>
+</form>
+<div class='mt_30'></div>
+<div class='btn btn-success' data-event-click='productCreate'>Add Product</div>
+<div class='products' data-foreach-product='products'>
+<form>
+<fieldset>
+<table>
+<tr>
+<td class='vt'>
+<label class='lbr_100'>Product:</label>
+<select class='w_100' data-bind='product.type' data-event-change='product.reset'>
+<option data-bind='type' data-foreach-type='types'></option>
+</select>
+</td>
+<td class='ir' data-showif='product.drink'>
+<label class='lbr_100'>Name:</label>
+<span class='mt_5'></span>
+<select class='w_230' data-bind='product.name' data-event-change='product.total'>
+<option data-bind='name' data-foreach-name='product.names'></option>
+</select>
+</td>
+<td class='ir' data-showif='product.drink'>
+<label class='lbr_100'>Size:</label>
+<span class='mt_5'></span>
+<select class='w_100' data-bind='product.size' data-event-change='product.total'>
+<option data-bind='size' data-foreach-size='product.sizes'></option>
+</select>
+</td>
+<td class='ir' data-showif='product.drink'>
+<label class='lbr_100'>Units:</label>
+<span class='mt_5'></span>
+<input class='irq' data-bind='product.units' data-event-change='product.total'>
+<span style='padding-left: 15px;'>
+<a data-event-click='productDestroy'>
+<i class='icon-remove-sign'></i>
+</a>
+</span>
+</td>
+<td class='ir' data-showif='product.food'>
+<label class='lbr_100'>Name:</label>
+<span class='mt_5'></span>
+<select class='w_200' data-bind='product.name' data-event-change='product.total'>
+<option data-bind='food' data-foreach-food='product.names'></option>
+</select>
+</td>
+<td class='ir' data-showif='product.food'>
+<label class='lbr_100'>Grams:</label>
+<span class='mt_5'></span>
+<input class='itz' data-bind='product.grams' data-event-change='product.total'>
+</td>
+<td class='ir' data-showif='product.food'>
+<label class='lbr_100'>Units:</label>
+<span class='mt_5'></span>
+<input class='itx' data-bind='product.units' data-event-change='product.total'>
+<span class='irt'>
+<a data-event-click='productDestroy'>
+<i class='icon-remove-sign'></i>
+</a>
+</span>
+</td>
+</tr>
+<tr data-showif='product.compute'>
+<td class='iq' colspan='4'>
+<span class='fwb'>Total:</span>
+<span class='total ml_10' data-bind='product.total' data-mixin='priceFormat'></span>
+</td>
+</tr>
+<tr data-showif='product.compute'>
+<td class='comp' colspan='4'>
+<table>
+<tr>
+<td>
+<span class='btn btn-warning' data-event-click='product.mod'>Add Modification</span>
+</td>
+<td class='cstd' data-showif='product.food'>
+<select class='w_230' data-bind='product.temp'>
+<option></option>
+<option data-bind='food' data-foreach-food='food_modifications'></option>
+</select>
+</td>
+<td class='cstd' data-showif='product.drink'>
+<select class='w_230' data-bind='product.temp'>
+<option></option>
+<option data-bind='drink' data-foreach-drink='drink_modifications'></option>
+</select>
+</td>
+</tr>
+<tr>
+<td>
+<ul data-foreach-mod='product.modifications' style='margin-top: 10px;'>
+<li>
+<span data-bind='mod'></span>
+<span>
+<a data-event-click='product.demod'>
+<i class='icon-remove-sign'></i>
+</a>
+</span>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</fieldset>
+</form>
+</div>
+<div class='conn' id='runner'>
+<div class='tar'>
+<span class='fwb'>Sub Total:</span>
+<span class='ml_5' data-bind='order.sub_total'></span>
+</div>
+<div class='hip'>
+<span class='fwb'>HST - 12%:</span>
+<span class='ml_5' data-bind='order.hst'></span>
+</div>
+<div class='hip'>
+<span class='fwb'>Order Total:</span>
+<span class='ml_5' data-bind='order.total'></span>
+</div>
+</div>

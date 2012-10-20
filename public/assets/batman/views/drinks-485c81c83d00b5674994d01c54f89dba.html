@@ -1,0 +1,26 @@
+<h1>Drinks</h1>
+<div class='mb_20'>
+<a class='btn btn-primary' data-route='routes.drinks.new'>New Drink</a>
+</div>
+<table class='index table table-bordered table-striped'>
+<thead>
+<tr>
+<th>Name</th>
+<th>Size</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr data-foreach-drink='drinks'>
+<td data-bind='drink.name'></td>
+<td data-bind='drink.size' data-mixin='capitalize'></td>
+<td data-bind='drink.price' data-mixin='priceFormat'></td>
+<td>
+<a class='btn btn-warning' data-route='routes.drinks[drink].edit'>Edit</a>
+</td>
+<td>
+<a class='btn btn-danger' data-event-click='drink.delete'>Delete</a>
+</td>
+</tr>
+</tbody>
+</table>
