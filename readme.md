@@ -1,4 +1,4 @@
-# Barista - CoffeeShop Ordering
+# Barista - CoffeeShop Ordering System
 ## How to use:
   1. git clone https://github.com/bevanhunt/batman-barista.git
   2. cd batman-barista
