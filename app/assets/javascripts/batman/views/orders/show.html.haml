@@ -1,0 +1,91 @@
+%h3{'data-bind' => 'order.number'}
+%form{'data-formfor-order' => 'order', class: 'form-horizontal'}
+  %fieldset
+    %label.lbl_100 Barista:
+    %div.mt_5
+    %select{'data-bind' => 'order.barista', 'data-event-change' => 'update'}
+      %option{'data-foreach-barista' => 'baristas', 'data-bind' => 'barista'}
+    %label.lbl_100 Status:
+    %div.mt_5
+    %select{'data-bind' => 'order.status', 'data-event-change' => 'update'}
+      %option{'data-foreach-status' => 'statuses', 'data-bind' => 'status'}
+%div.mt_30
+%div.btn.btn-success{'data-event-click' => 'productCreate'} Add Product
+%div.products{'data-foreach-product' => 'products'}
+  %form
+    %fieldset
+      %table
+        %tr
+          %td.vt
+            %label.lbr_100 Product:
+            %select.w_100{'data-event-change' => 'product.reset', 'data-bind' => 'product.type'}
+              %option{'data-foreach-type' => 'types', 'data-bind' => 'type'}
+          %td.ir{'data-showif' => 'product.drink'} 
+            %label.lbr_100 Name:
+            %span.mt_5
+            %select.w_230{'data-bind' => 'product.name', 'data-event-change' => 'product.total'}
+              %option{'data-foreach-name' => 'product.names', 'data-bind' => 'name'}
+          %td.ir{'data-showif' => 'product.drink'}
+            %label.lbr_100 Size:
+            %span.mt_5
+            %select.w_100{'data-bind' => 'product.size', 'data-event-change' => 'product.total'}
+              %option{'data-foreach-size' => 'product.sizes', 'data-bind' => 'size'}
+          %td.ir{'data-showif' => 'product.drink'} 
+            %label.lbr_100 Units:
+            %span.mt_5
+            %input.irq{'data-bind' => 'product.units', 'data-event-change' => 'product.total'}
+            %span{style: 'padding-left: 15px;'}
+              %a{'data-event-click' => 'productDestroy'}
+                %i{class: 'icon-remove-sign'}
+          %td.ir{'data-showif' => 'product.food'} 
+            %label.lbr_100 Name:
+            %span.mt_5
+            %select.w_200{'data-bind' => 'product.name', 'data-event-change' => 'product.total'}
+              %option{'data-foreach-food' => 'product.names', 'data-bind' => 'food'}
+          %td.ir{'data-showif' => 'product.food'} 
+            %label.lbr_100 Grams:
+            %span.mt_5
+            %input.itz{'data-bind' => 'product.grams', 'data-event-change' => 'product.total'}
+          %td.ir{'data-showif' => 'product.food'} 
+            %label.lbr_100 Units:
+            %span.mt_5
+            %input.itx{'data-bind' => 'product.units', 'data-event-change' => 'product.total'}
+            %span.irt
+              %a{'data-event-click' => 'productDestroy'}
+                %i{class: 'icon-remove-sign'}
+        %tr{'data-showif' => 'product.compute'}
+          %td.iq{colspan: '4'}
+            %span.fwb Total:
+            %span.total.ml_10{'data-mixin' => 'priceFormat', 'data-bind' => 'product.total'} 
+        %tr{'data-showif' => 'product.compute'}
+          %td.comp{colspan: '4'}
+            %table
+              %tr
+                %td
+                  %span.btn.btn-warning{'data-event-click' => 'product.mod'} Add Modification
+                %td.cstd{'data-showif' => 'product.food'}
+                  %select.w_230{'data-bind' => 'product.temp'}
+                    %option
+                    %option{'data-foreach-food' => 'food_modifications', 'data-bind' => 'food'}
+                %td.cstd{'data-showif' => 'product.drink'}
+                  %select.w_230{'data-bind' => 'product.temp'}
+                    %option
+                    %option{'data-foreach-drink' => 'drink_modifications', 'data-bind' => 'drink'}
+              %tr
+                %td
+                  %ul{'data-foreach-mod' => 'product.modifications', style: 'margin-top: 10px;'}
+                    %li
+                      %span{'data-bind' => 'mod'}
+                      %span
+                        %a{'data-event-click' => 'product.demod'}
+                          %i.icon-remove-sign
+%div.conn#runner
+  %div.tar
+    %span.fwb Sub Total: 
+    %span.ml_5{'data-bind' => 'order.sub_total'}
+  %div.hip  
+    %span.fwb HST - 12%: 
+    %span.ml_5{'data-bind' => 'order.hst'}
+  %div.hip
+    %span.fwb Order Total: 
+    %span.ml_5{'data-bind' => 'order.total'}

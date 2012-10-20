@@ -1,0 +1,22 @@
+%h1 Orders
+%div.mb_20
+  %a.btn.btn-primary{'data-route' => 'routes.orders.new'} New Order
+%table.index.table.table-bordered.table-striped
+  %thead
+    %tr
+      %th Order #
+      %th Barista
+      %th Status
+      %th Subtotal
+      %th Total
+  %tbody
+    %tr{'data-foreach-order' => 'orders'}
+      %td{'data-bind' => 'order.number'}
+      %td{'data-bind' => 'order.barista'}
+      %td{'data-bind' => 'order.status'}
+      %td{'data-bind' => 'order.sub_total'}
+      %td{'data-bind' => 'order.total'}
+      %td
+        %a.btn.btn-warning{'data-route' => 'routes.orders[order]'} Edit
+      %td
+        %a.btn.btn-danger{'data-event-click' => 'order.delete'} Delete

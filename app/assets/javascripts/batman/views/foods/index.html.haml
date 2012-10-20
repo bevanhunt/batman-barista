@@ -1,0 +1,18 @@
+%h1 Foods
+%div.mb_20
+  %a.btn.btn-primary{'data-route' => 'routes.foods.new'} New Food
+%table.index.table.table-bordered.table-striped
+  %thead
+    %tr
+      %th Name
+      %th Price Per Gram
+      %th Base Price
+  %tbody
+    %tr{'data-foreach-food' => 'foods'}
+      %td{'data-bind' => 'food.name'}
+      %td{'data-bind' => 'food.price_per_gram', 'data-mixin' => 'priceFormat'}
+      %td{'data-bind' => 'food.base_price', 'data-mixin' => 'priceFormat'}
+      %td
+        %a.btn.btn-warning{'data-route' => 'routes.foods[food].edit'} Edit
+      %td
+        %a.btn.btn-danger{'data-event-click' => 'food.delete'} Delete

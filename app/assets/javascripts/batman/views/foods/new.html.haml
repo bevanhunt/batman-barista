@@ -1,0 +1,21 @@
+%h1 New Food
+%form.form-horizontal{'data-formfor-food' => 'food', 'data-event-submit' => 'create'}
+  %fieldset
+    #error-explanation.alert-message{'data-showif' => 'food.errors.length'}
+      %b
+        Errors that need to be corrected:
+      %ul
+        %li{'data-foreach-error' => 'food.errors', 'data-bind' => 'error.fullMessage'}
+    %label.lbl_50 Name:
+    %div.mt_5
+      %input{'data-bind' => 'food.name'}
+    %label.lbl_150 Price Per Gram:
+    %div.mt_5
+      %input{'data-bind' => 'food.price_per_gram'}
+    %label.lbl_150 Base Price:
+    %div.mt_5
+      %input{'data-bind' => 'food.base_price'}
+    %div.mt_20
+      %input.btn.btn-primary{type: 'submit', value: 'Create Food'}
+%div.mt_30
+  %a{'data-route' => 'routes.foods'} Back

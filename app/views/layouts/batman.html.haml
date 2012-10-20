@@ -1,0 +1,33 @@
+!!!
+%html
+  %head
+    %title Barista
+    %meta{name: "viewport", content: "width=device-width, maximum-scale=1.0"}
+    %meta{:charset => "utf-8"}
+      = stylesheet_link_tag 'savvy'
+      = javascript_include_tag 'batman'
+      = csrf_meta_tags
+  %body
+    .container#container{style: 'border-radius: 15px; margin-bottom: 25px; margin-top: 30px;'}
+      %table{:style => "margin-top:20px; margin-bottom: 30px;"}
+        %tr
+          %td
+            %a{'data-route' => 'routes'}
+              = image_tag("coffee.png")
+          %td{style: 'padding-left: 150px; font-size: 40px; font-weight: bold; font-family: Tahoma;'}
+            Barista
+      %div.navbar
+        %div.navbar-inner
+          %div.container
+            %div.nav-collapse
+              %ul.nav
+                %li
+                  %a{'data-route' => 'routes.orders'}
+                    Orders
+                %li
+                  %a{'data-route' => 'routes.foods'}
+                    Foods
+                %li
+                  %a{'data-route' => 'routes.drinks'}
+                    Drinks
+      %div{"data-yield" => "main"}

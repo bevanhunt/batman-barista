@@ -1,0 +1,23 @@
+%h1 New Drink
+%form.form-horizontal{'data-formfor-drink' => 'drink', 'data-event-submit' => 'create'}
+  %fieldset
+    #error-explanation.alert-message{'data-showif' => 'drink.errors.length'}
+      %b
+        Errors that need to be corrected:
+      %ul
+        %li{'data-foreach-error' => 'drink.errors', 'data-bind' => 'error.fullMessage'}
+    %label.lbl_50 Name:
+    %div.mt_5
+      %input{'data-bind' => 'drink.name'}
+    %label.lbl_150 Price:
+    %div.mt_5
+      %input{'data-bind' => 'drink.price'}
+    %label.lbl_50 Size:
+    %div.mt_5
+    %select{'data-bind' => 'drink.size'}
+      %option
+      %option{'data-foreach-size' => 'sizes', 'data-bind' => 'size'}
+    %div.mt_20
+      %input.btn.btn-primary{type: 'submit', value: 'Create Drink'}
+%div.mt_30
+  %a{'data-route' => 'routes.drinks'} Back
