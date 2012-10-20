@@ -7,7 +7,7 @@
   5. open browser to http://localhost:3000
 
 ## Why:
-  To create a nice demo to show off Batman-Rails with Mongoid
+  To create a demo that uses many features of Batman-Rails
 
 ## How it works:
   Create food and drink items then create orders for those items
