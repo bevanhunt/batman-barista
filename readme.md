@@ -1,7 +1,7 @@
 # Barista - CoffeeShop Ordering
 ## How to use:
-  1. git clone https://github.com/bevanhunt/barista.git
-  2. cd barista
+  1. git clone https://github.com/bevanhunt/batman-barista.git
+  2. cd batman-barista
   3. bundle install
   4. rails server
   5. open browser to http://localhost:3000
@@ -10,9 +10,9 @@
   Batman-Rails & Mongoid
 
 ## What it does:
-  Demos an ordering system for a CoffeeShop 
+  An ordering system for a CoffeeShop 
 
-## How does it work:
+## How to work it:
   Create food and drink items then create orders for those items
 
 ## Live Demo at:
