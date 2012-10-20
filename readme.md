@@ -6,13 +6,10 @@
   4. rails server
   5. open browser to http://localhost:3000
 
-## What is it built on:
-  Batman-Rails & Mongoid
+## Why:
+  To create nice demo to show off Batman-Rails with Mongoid
 
-## What it does:
-  An ordering system for a CoffeeShop 
-
-## How to work it:
+## How it works:
   Create food and drink items then create orders for those items
 
 ## Live Demo at:
