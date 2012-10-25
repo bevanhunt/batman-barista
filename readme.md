@@ -41,8 +41,8 @@
       * No HTML templating language - should support Jade 
       * Has no concept of form value preservation
 
+## Demo:
+  http://barsavvy.herokuapp.com
+
 ## Meteor-Barista:
   https://github.com/bevanhunt/meteor-barista
-
-## Demo:
-  [http://barsavvy.herokuapp.com](http://barsavvy.herokuapp.com "Demo")
