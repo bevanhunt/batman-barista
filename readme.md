@@ -11,54 +11,54 @@
 
 ## Comparsion:
   Batman-Rails:
-  >>   
+    
     * Pros:
-  >>>
-    ** Full MVC REST support built-in
+      
+      * Full MVC REST support built-in
 
-    ** HTML data-bindings
+      * HTML data-bindings
       
-    ** Validations built-in
+      * Validations built-in
       
-    ** HTML templating language - HAML (optional)
+      * HTML templating language - HAML (optional)
       
-    ** Model relationship keywords (rather than having to set MongoDB keys manually)
-  >> 
+      * Model relationship keywords (rather than having to set MongoDB keys manually)
+
     * Cons: 
-  >>>
-      ** Bad documentation 
+
+      * Bad documentation 
     
-      ** 3 specified model schemas (duplication) = ActiveModel, JSON Serializer, and Batman Models
+      * 3 specified model schemas (duplication) = ActiveModel, JSON Serializer, and Batman Models
     
-      ** Real-time is not built-in
+      * Real-time is not built-in
     
-      ** Manually refreshing browser is required to see app changes
+      * Manually refreshing browser is required to see app changes
     
-      ** Manually via jQuery set that the first option for a dropdowns is selected or it will be undefined
+      * Manually via jQuery set that the first option for a dropdowns is selected or it will be undefined
   
   Meteor.js:
-  >>
+  
     * Pros:
-  >>>  
-      ** The same schemaless model on both server and client = no duplication 
+   
+      * The same schemaless model on both server and client = no duplication 
      
-      ** Real-time built-in
+      * Real-time built-in
      
-      ** Auto-refreshes browser on app changes 
+      * Auto-refreshes browser on app changes 
      
-      ** Decent documentation
+      * Decent documentation
      
-      ** Automatically selects first option in dropdowns and is not undefined
-  >>    
+      * Automatically selects first option in dropdowns and is not undefined
+  
     * Cons:
-  >>>  
-      ** Validations are not built-in
+  
+      * Validations are not built-in
     
-      ** Client-side REST requires manually writing Backbone routes - requires a 3rd party library (Reactive Router)
+      * Client-side REST requires manually writing Backbone routes - requires a 3rd party library (Reactive Router)
     
-      ** No HTML templating language - should support Jade 
+      * No HTML templating language - should support Jade 
     
-      ** Has no concept of form value preservation
+      * Has no concept of form value preservation
 
 ## Meteor-Barista:
   https://github.com/bevanhunt/meteor-barista
