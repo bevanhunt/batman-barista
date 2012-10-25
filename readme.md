@@ -9,6 +9,9 @@
 ## Why:
   Meteor.js vs. Batman-Rails using a MVC forms app
 
+## Note: 
+  Meteor.js version is real-time 
+
 ## Demo:
   http://barsavvy.herokuapp.com
 
