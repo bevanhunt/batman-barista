@@ -25,7 +25,7 @@
     
     Pros:
       * Full MVC REST support built-in
-      * HTML data-bindings
+      * HTML data-bindings with computed observables
       * Validations built-in
       * HTML templating language - HAML (optional)
       * Model relationship keywords (rather than having to set MongoDB keys manually)
@@ -49,3 +49,4 @@
       * Client-side REST requires manually writing Backbone routes - requires a 3rd party library (Reactive Router)
       * No HTML templating language - should support Jade 
       * Has no concept of form value preservation for non-focused inputs
+      * Re-renders the entire template - should support Rivets.js
