@@ -7,7 +7,7 @@
   5. open browser to http://localhost:3000
 
 ## Why:
-  Meteor.js vs. Batman-Rails using a MVC forms app
+  Meteor.js vs. Batman-Rails using a LOB app
 
 ## Notes: 
   Meteor.js version is real-time 
