@@ -10,9 +10,7 @@
   Meteor.js vs. Batman-Rails using a LOB app
 
 ## Notes: 
-  Meteor.js version is real-time 
-  
-  When you update foods or drinks - the updated versions will only be available to products that have not been added to an order yet
+  * When you update foods or drinks - the updated versions will only be available to products that have not been added to an order yet
 
 ## Demo:
   http://barsavvy.herokuapp.com
@@ -25,7 +23,7 @@
     
     Pros:
       * Full MVC REST support built-in
-      * HTML data-bindings with computed observables
+      * HTML data-bindings
       * Validations built-in
       * HTML templating language - HAML (optional)
       * Model relationship keywords (rather than having to set MongoDB keys manually)
@@ -45,7 +43,6 @@
       * Decent documentation
   
     Cons:
-      * Validations are not built-in
-      * Client-side REST requires manually writing Backbone routes - requires a 3rd party library (Reactive Router)
-      * Writing HTML in Handlebars - should support Jade 
-      * Re-renders the entire template - should support HTML data-bindings
+      * Validations are not built-in - overcome with 3rd party library (Knockout)
+      * Client-side REST requires manually writing Backbone routes - using 3rd party library (Reactive Router)
+      * Writing HTML in Handlebars - should support Jade and native data-bindings
