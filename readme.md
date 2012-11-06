@@ -22,7 +22,6 @@
   Batman-Rails:
     
     Pros:
-      * Full MVC REST support built-in
       * HTML data-bindings
       * Validations built-in
       * HTML templating language - HAML (optional)
@@ -44,5 +43,4 @@
   
     Cons:
       * Validations are not built-in - overcome with 3rd party library (Knockout)
-      * Client-side REST requires manually writing Backbone routes - using 3rd party library (Reactive Router)
       * Writing HTML in Handlebars - should support Jade and native data-bindings
