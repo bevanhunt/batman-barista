@@ -41,3 +41,6 @@
   
     Cons:
       * Writing HTML in Handlebars - should support Jade in Handlebars
+
+## License
+MIT/X11
